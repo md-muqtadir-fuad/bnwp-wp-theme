@@ -1,0 +1,72 @@
+<?php
+if (!defined('ABSPATH')) { exit; }
+?><!DOCTYPE html>
+<html <?php language_attributes(); ?> data-bs-theme="light">
+<head>
+    <meta charset="<?php bloginfo('charset'); ?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="<?php echo esc_attr(get_bloginfo('description')); ?>">
+    <link rel="canonical" href="<?php echo esc_url(is_singular() ? get_permalink() : home_url('/')); ?>">
+    <?php wp_head(); ?>
+</head>
+<body <?php body_class('d-flex flex-column min-vh-100'); ?>>
+<?php wp_body_open(); ?>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v22.0"></script>
+<header>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container py-1 py-sm-2 border-bottom">
+            <a class="navbar-brand me-4" href="<?php echo esc_url(home_url('/')); ?>">
+                <?php if (has_custom_logo()) : ?>
+                    <?php the_custom_logo(); ?>
+                <?php else : ?>
+                    <h4 class="mb-0 fw-bold"><?php bloginfo('name'); ?></h4>
+                    <span class="d-block fs-5"><?php bloginfo('description'); ?></span>
+                <?php endif; ?>
+            </a>
+            <div class="d-flex row-center" id="accessibilityMenu">
+                <?php bnwp_language_switcher(); ?>
+                <div class="dropdown" id="colorModeToogler">
+                    <button type="button" class="btn nav-link px-2" id="colorModeTooglerBtn" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                        <i id="theme-icon-active" class="bi-sun"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="light">
+                            <i class="me-1 bi-sun"></i><span>Light</span>
+                        </li>
+                        <li type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                            <i class="me-1 bi-moon"></i><span>Dark</span>
+                        </li>
+                    </ul>
+                </div>
+                <div id="LocalNavigationToogleIcon">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#LocalNavigationMenu" aria-controls="LocalNavigationMenu" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="navbar navbar-expand-lg">
+        <div class="container">
+            <div class="collapse navbar-collapse py-2" id="LocalNavigationMenu">
+                <?php get_search_form(); ?>
+                <?php
+                if (has_nav_menu('primary')) {
+                    wp_nav_menu(array(
+                        'theme_location' => 'primary',
+                        'container' => false,
+                        'menu_class' => 'navbar-nav me-auto mb-2 mb-lg-0',
+                        'fallback_cb' => 'bnwp_primary_menu_fallback',
+                        'depth' => 2,
+                    ));
+                } else {
+                    bnwp_primary_menu_fallback();
+                }
+                ?>
+            </div>
+        </div>
+    </div>
+    <div class="border-bottom"></div>
+</header>
+<main class="full-height flex-grow-1">
