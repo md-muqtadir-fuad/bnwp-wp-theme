@@ -5,9 +5,14 @@
         <div class="col-lg-7">
             <h1 class="display-4 text-body-emphasis">বাংলা উইকিসংযোগ একটি সহযোগিতামূলক উদ্যোগ যা...</h1>
             <p class="lead">... বাংলা ভাষায় উইকিপিডিয়ার বিষয়বস্তু বৃদ্ধি এবং সম্প্রসারণের উপর দৃষ্টি নিবদ্ধ করে। বিভিন্ন আকর্ষণীয় প্রতিযোগিতা, সম্পাদনা-অ-থন এবং প্রশিক্ষণ কর্মসূচির মাধ্যমে, আমরা উইকিপিডিয়া এবং এর সহযোগী প্রকল্প যেমন উইকিকোট, উইকিভ্রমণ, উইকিবই এবং উইকশনারিতে উচ্চমানের, অন্তর্ভুক্তিমূলক বিষয়বস্তু তৈরি করার লক্ষ্য রাখি।</p>
-            <div>
-                <a type="button" href="<?php echo esc_url(home_url('/about/')); ?>" class="btn btn-primary btn-md px-4 me-md-2 fw-bold">আরও জানুন</a>
-                <a type="button" href="https://meta.wikimedia.org/wiki/Bangla_WikiConnect" class="btn btn-secondary btn-md px-4">মেটা'উইকিতে পড়ূন</a>
+            <div class="front-hero-buttons">
+                <a href="<?php echo esc_url(home_url('/about/')); ?>" class="btn btn-primary fw-bold">
+                    আরও জানুন
+                </a>
+
+                <a href="https://meta.wikimedia.org/wiki/Bangla_WikiConnect" class="btn btn-secondary">
+                    মেটা'উইকিতে পড়ুন
+                </a>
             </div>
         </div>
         <div class="col-lg-4 offset-lg-1 p-0">

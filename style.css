@@ -172,3 +172,113 @@ img {
 [data-bs-theme="dark"] .shadow {
   box-shadow: 0 1rem 3rem rgba(0,0,0,.45) !important;
 }
+
+/* Hero capsule buttons */
+.front-hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+}
+
+.front-hero-buttons .btn {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    width: auto !important;
+    min-width: auto !important;
+    max-width: none !important;
+    padding: 12px 24px !important;
+    border-radius: 24px !important;
+    margin: 0 !important;
+}
+
+/* Mobile hero buttons */
+@media (max-width: 576px) {
+    .front-hero-buttons {
+        flex-direction: column;
+        gap: 12px;
+        width: auto !important;
+        justify-content: flex-start !important;
+        align-items: flex-start !important;
+        margin-top: 18px;
+    }
+
+    .front-hero-buttons .btn {
+        width: auto !important;
+        min-width: auto !important;
+        max-width: none !important;
+        padding: 12px 24px !important;
+        border-radius: 24px !important;
+        align-self: flex-start !important;
+        text-align: center;
+    }
+}
+
+/* Project archive button */
+.bnwp-project-archive-actions {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.bnwp-capsule-btn {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px !important;
+    border-radius: 24px !important;
+    width: auto !important;
+    min-width: auto !important;
+    max-width: max-content !important;
+    margin: 0 !important;
+}
+
+@media (max-width: 576px) {
+    .bnwp-capsule-btn {
+        padding: 12px 24px !important;
+        border-radius: 24px !important;
+        font-size: 0.95rem;
+    }
+}
+
+/* Header logo */
+.bnwp-header-brand {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none !important;
+}
+
+.bnwp-header-logo {
+    width: 36px !important;
+    height: auto !important;
+    max-width: 36px !important;
+    display: inline-block !important;
+    flex-shrink: 0;
+}
+
+.bnwp-header-title {
+    font-weight: 700;
+    font-size: 1.35rem;
+    line-height: 1.2;
+}
+
+/* Mobile header logo */
+@media (max-width: 576px) {
+    .bnwp-header-brand {
+        gap: 8px;
+        margin-right: 0 !important;
+    }
+
+    .bnwp-header-logo {
+        width: 30px !important;
+        max-width: 30px !important;
+    }
+
+    .bnwp-header-title {
+        font-size: 1.1rem;
+    }
+}

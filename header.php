@@ -16,15 +16,19 @@ if (!defined('ABSPATH')) { exit; }
 <header>
     <nav class="navbar navbar-expand-lg">
         <div class="container py-1 py-sm-2 border-bottom">
-            <a class="navbar-brand me-4" href="<?php echo esc_url(home_url('/')); ?>">
-                <?php if (has_custom_logo()) : ?>
-                    <?php the_custom_logo(); ?>
-                <?php else : ?>
-                    <h4 class="mb-0 fw-bold"><?php bloginfo('name'); ?></h4>
-                    <span class="d-block fs-5"><?php bloginfo('description'); ?></span>
-                <?php endif; ?>
+            <a class="navbar-brand bnwp-header-brand me-4" href="<?php echo esc_url(home_url('/')); ?>">
+                <img
+                    class="bnwp-header-logo"
+                    src="<?php echo esc_url(get_template_directory_uri() . '/assets/uploads/Bangla_WikiConnect_Logo_small.png'); ?>"
+                    alt="<?php echo esc_attr(get_bloginfo('name')); ?>"
+                    loading="lazy"
+                >
+
+                <span class="bnwp-header-title">
+                    <?php bloginfo('name'); ?>
+                </span>
             </a>
-            <div class="d-flex row-center" id="accessibilityMenu">
+                        <div class="d-flex row-center" id="accessibilityMenu">
                 <?php bnwp_language_switcher(); ?>
                     <div id="colorModeToogler">
                         <button
