@@ -282,3 +282,13 @@ img {
         font-size: 1.1rem;
     }
 }
+
+/* Light mode color */
+html[data-bs-theme="light"],
+html[data-bs-theme="light"] body,
+html[data-bs-theme="light"] main,
+html[data-bs-theme="light"] .bg-body,
+html[data-bs-theme="light"] .bg-white,
+html[data-bs-theme="light"] .card {
+    background-color: #F8F9FA !important;
+}
