@@ -14,7 +14,7 @@
                 <a type="button" class="btn btn-secondary" href="<?php echo esc_url(home_url('/persona/')); ?>">সদস্য</a>
             </div>
         </div>
-        <div class="pb-4 fs-6">সর্বস্বত্ব সংরক্ষিত।<br>Copyright © <?php echo esc_html(date('Y')); ?> <?php bloginfo('name'); ?></div>
+        <div class="pb-4 fs-6">এই সাইটের সমস্ত চিত্র ও ভিডিও কন্টেন্ট সিসি বাই-এসএ ৪.০ লাইসেন্সের আওতায় প্রকাশিত যদি না সংশ্লিষ্ট কনটেন্টে পৃথক লাইসেন্সের উল্লেখ থাকে। তবে এই সাইটের সমস্ত পাঠ্য কনটেন্ট মেধাসত্ত্বের অন্তর্ভুক্ত বলে গন্য হবে।<br>©২০২৬, সিসি বাই-এসএ ৪.০ <?php echo esc_html(date('Y')); ?> <?php bloginfo('name'); ?></div>
     </div>
 </footer>
 <?php wp_footer(); ?>

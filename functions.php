@@ -25,7 +25,7 @@ function bnwp_lang_arg($url, $lang = null) {
 }
 
 function bnwp_get_avatar_placeholder() {
-    return get_template_directory_uri() . '/assets/uploads/avatar-placeholder.svg';
+    return get_template_directory_uri() . '/assets/uploads/avatar-placeholder.png';
 }
 
 function bnwp_clean_image_url($url, $fallback = '') {
@@ -330,4 +330,3 @@ function bnwp_nav_menu_submenu_css_class($classes, $args, $depth) {
     return array_unique($classes);
 }
 add_filter('nav_menu_submenu_css_class', 'bnwp_nav_menu_submenu_css_class', 10, 3);
-

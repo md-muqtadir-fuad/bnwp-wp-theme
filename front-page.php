@@ -11,7 +11,7 @@
             </div>
         </div>
         <div class="col-lg-4 offset-lg-1 p-0">
-            <img class="rounded-lg-3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Bangla_WikiConnect_Proposed_Logo_01_-_BN.svg/290px-Bangla_WikiConnect_Proposed_Logo_01_-_BN.svg.png?20250301212148" alt="Bangla WikiConnect" width="720">
+            <img class="rounded-lg-3" src="./wp-content/themes/bnwp-wikiconnect/assets/uploads/Bangla_WikiConnect_LOGO.png" alt="Bangla WikiConnect" width="720">
         </div>
     </div>
 </section>
@@ -102,9 +102,9 @@
 <section class="container my-5 text-center py-5">
     <h2 class="my-5">আমাদের অংশীদার</h2>
     <div class="d-flex flex-wrap" style="justify-content:center;gap:1rem">
-        <div class="text-secondary bg-light p-4"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Wikimedia_Foundation_logo_-_vertical.svg/512px-Wikimedia_Foundation_logo_-_vertical.svg.png" alt="Wikimedia Foundation" style="height:80px;width:auto"></div>
-        <div class="text-secondary bg-light p-4"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/WikiNandini_text_logo_2024.svg/320px-WikiNandini_text_logo_2024.svg.png" alt="WikiNandini" style="height:80px;width:auto"></div>
-        <div class="text-secondary bg-light p-4"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Wikimedia_Bangladesh_logo.svg/460px-Wikimedia_Bangladesh_logo.svg.png" alt="Wikimedia Bangladesh" style="height:80px;width:auto"></div>
+        <div class="text-secondary bg-light p-4"><img src="./wp-content/themes/bnwp-wikiconnect/assets/uploads/Wikimedia_Foundation_logo_-_vertical.png" alt="Wikimedia Foundation" style="height:80px;width:auto"></div>
+        <div class="text-secondary bg-light p-4"><img src="./wp-content/themes/bnwp-wikiconnect/assets/uploads/WikiNandini_text_logo_2024.png" alt="WikiNandini" style="height:80px;width:auto"></div>
+        <div class="text-secondary bg-light p-4"><img src="./wp-content/themes/bnwp-wikiconnect/assets/uploads/Wikimedia_Bangladesh_logo.png" alt="Wikimedia Bangladesh" style="height:80px;width:auto"></div>
     </div>
 </section>
 
