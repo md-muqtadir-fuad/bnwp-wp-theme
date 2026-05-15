@@ -2,65 +2,68 @@
   'use strict';
 
   const storageKey = 'bnwp-theme';
-  const oldStorageKey = 'theme';
-  const getStoredTheme = () => localStorage.getItem(storageKey) || localStorage.getItem(oldStorageKey);
-  const setStoredTheme = theme => localStorage.setItem(storageKey, theme);
-  const prefersDark = () => window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+  const getStoredTheme = () => localStorage.getItem(storageKey);
+
+  const setStoredTheme = theme => {
+    localStorage.setItem(storageKey, theme);
+  };
+
+  const prefersDark = () => {
+    return window.matchMedia('(prefers-color-scheme: dark)').matches;
+  };
 
   const getPreferredTheme = () => {
     const storedTheme = getStoredTheme();
-    if (storedTheme === 'light' || storedTheme === 'dark') return storedTheme;
+
+    if (storedTheme === 'light' || storedTheme === 'dark') {
+      return storedTheme;
+    }
+
     return prefersDark() ? 'dark' : 'light';
   };
 
   const setTheme = theme => {
-    const resolved = theme === 'auto' ? (prefersDark() ? 'dark' : 'light') : theme;
-    document.documentElement.setAttribute('data-bs-theme', resolved);
+    document.documentElement.setAttribute('data-bs-theme', theme);
   };
 
-  const showActiveTheme = (theme, focus = false) => {
-    const switcher = document.querySelector('#colorModeTooglerBtn');
-    if (!switcher) return;
+  const updateButtonIcon = theme => {
+    const icon = document.querySelector('#theme-icon-active');
+    const button = document.querySelector('#colorModeTooglerBtn');
 
-    const resolved = theme === 'auto' ? getPreferredTheme() : theme;
-    const activeIcon = document.querySelector('#theme-icon-active');
-    const btnToActive = document.querySelector(`[data-bs-theme-value="${resolved}"]`);
+    if (!icon || !button) return;
 
-    document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
-      element.classList.remove('active');
-      element.setAttribute('aria-pressed', 'false');
-    });
-
-    if (btnToActive) {
-      btnToActive.classList.add('active');
-      btnToActive.setAttribute('aria-pressed', 'true');
-      const icon = btnToActive.querySelector('i');
-      if (icon && activeIcon) activeIcon.className = icon.className.replace('me-1', '').trim();
-      switcher.setAttribute('aria-label', `Theme: ${resolved}`);
+    if (theme === 'dark') {
+      icon.className = 'bi-moon';
+      button.setAttribute('aria-label', 'Switch to light mode');
+      button.setAttribute('title', 'Switch to light mode');
+    } else {
+      icon.className = 'bi-sun';
+      button.setAttribute('aria-label', 'Switch to dark mode');
+      button.setAttribute('title', 'Switch to dark mode');
     }
-
-    if (focus) switcher.focus();
   };
 
-  setTheme(getPreferredTheme());
+  const applyTheme = theme => {
+    setTheme(theme);
+    updateButtonIcon(theme);
+  };
 
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-    const storedTheme = getStoredTheme();
-    if (storedTheme !== 'light' && storedTheme !== 'dark') setTheme(getPreferredTheme());
-  });
+  applyTheme(getPreferredTheme());
 
   window.addEventListener('DOMContentLoaded', () => {
-    const theme = getPreferredTheme();
-    setTheme(theme);
-    showActiveTheme(theme);
+    const button = document.querySelector('#colorModeTooglerBtn');
 
-    document.querySelectorAll('[data-bs-theme-value]').forEach(toggle => {
-      toggle.addEventListener('click', () => {
-        const selected = toggle.getAttribute('data-bs-theme-value');
-        setStoredTheme(selected);
-        setTheme(selected);
-        showActiveTheme(selected, true);
-      });
+    if (!button) return;
+
+    applyTheme(getPreferredTheme());
+
+    button.addEventListener('click', () => {
+      const currentTheme = document.documentElement.getAttribute('data-bs-theme') || 'light';
+      const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+      setStoredTheme(nextTheme);
+      applyTheme(nextTheme);
     });
   });
 })();

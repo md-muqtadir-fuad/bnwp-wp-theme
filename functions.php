@@ -74,15 +74,24 @@ function bnwp_translation_url($target_lang) {
 
 function bnwp_language_switcher() {
     $current = bnwp_current_language();
+    $target  = $current === 'en' ? 'bn' : 'en';
+
+    $current_label = $current === 'en' ? 'English' : 'বাংলা';
+    $target_label  = $target === 'en' ? 'English' : 'বাংলা';
+
     ?>
-    <div class="dropdown border-start border-end" id="langSwitcher">
-        <button type="button" class="btn nav-link px-2" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static" aria-label="Language switcher">
-            <i class="bi bi-translate me-1"></i><span class="d-none d-md-inline"><?php echo $current === 'en' ? 'English' : 'বাংলা'; ?></span>
-        </button>
-        <ul class="dropdown-menu dropdown-menu-end">
-            <li><a class="dropdown-item<?php echo $current === 'bn' ? ' active' : ''; ?>" href="<?php echo esc_url(bnwp_translation_url('bn')); ?>">বাংলা</a></li>
-            <li><a class="dropdown-item<?php echo $current === 'en' ? ' active' : ''; ?>" href="<?php echo esc_url(bnwp_translation_url('en')); ?>">English</a></li>
-        </ul>
+    <div class="border-start border-end" id="langSwitcher">
+        <a
+            class="btn nav-link px-2"
+            href="<?php echo esc_url(bnwp_translation_url($target)); ?>"
+            aria-label="<?php echo esc_attr('Switch to ' . $target_label); ?>"
+            title="<?php echo esc_attr('Switch to ' . $target_label); ?>"
+        >
+            <i class="bi bi-translate me-1"></i>
+            <span class="d-none d-md-inline">
+                <?php echo esc_html($current_label); ?>
+            </span>
+        </a>
     </div>
     <?php
 }

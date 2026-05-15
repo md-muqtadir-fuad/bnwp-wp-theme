@@ -26,19 +26,16 @@ if (!defined('ABSPATH')) { exit; }
             </a>
             <div class="d-flex row-center" id="accessibilityMenu">
                 <?php bnwp_language_switcher(); ?>
-                <div class="dropdown" id="colorModeToogler">
-                    <button type="button" class="btn nav-link px-2" id="colorModeTooglerBtn" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
-                        <i id="theme-icon-active" class="bi-sun"></i>
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu-end">
-                        <li type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="light">
-                            <i class="me-1 bi-sun"></i><span>Light</span>
-                        </li>
-                        <li type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
-                            <i class="me-1 bi-moon"></i><span>Dark</span>
-                        </li>
-                    </ul>
-                </div>
+                    <div id="colorModeToogler">
+                        <button
+                            type="button"
+                            class="btn nav-link px-2"
+                            id="colorModeTooglerBtn"
+                            aria-label="Toggle dark mode"
+                        >
+                            <i id="theme-icon-active" class="bi-sun"></i>
+                        </button>
+                    </div>
                 <div id="LocalNavigationToogleIcon">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#LocalNavigationMenu" aria-controls="LocalNavigationMenu" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
