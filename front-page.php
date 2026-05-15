@@ -95,15 +95,6 @@
     </div>
 </section>
 
-<section class="container py-5">
-    <h3 class="text-center mb-4 fw-bold">ফেসবুক ফিড</h3>
-    <div class="row justify-content-center">
-        <div class="col-lg-8 d-flex justify-content-center">
-            <div class="fb-page" data-href="https://www.facebook.com/banglawikiconnect" data-tabs="timeline" data-width="500" data-height="500" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
-        </div>
-    </div>
-</section>
-
 <section class="container my-5 text-center py-5">
     <h2 class="my-5">আমাদের অংশীদার</h2>
     <div class="d-flex flex-wrap" style="justify-content:center;gap:1rem">
