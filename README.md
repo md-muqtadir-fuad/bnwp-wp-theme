@@ -1,9 +1,104 @@
+<a id="bnwpbn"></a>
 # বিএনডব্লিউপি উইকিসংযোগ ওয়ার্ডপ্রেস থিম
 
 **বিএনডব্লিউপি উইকিসংযোগ** একটি কাস্টম ওয়ার্ডপ্রেস থিম। এটি বাংলা উইকিসংযোগ ওয়েবসাইটের জন্য তৈরি। থিমটিতে বাংলা-প্রথম নকশা, প্রকল্প পৃষ্ঠা, সদস্য বা পারসোনা প্রোফাইল, বাংলা-ইংরেজি ভাষা বদল, আলো-অন্ধকার মোড, কাস্টম আর্কাইভ, কাস্টম মেটা ফিল্ড এবং প্রতিক্রিয়াশীল বিন্যাস রয়েছে।
 
+![উইকিসংযোগ ওয়ার্ডপ্রেস থিম](assets\uploads\bnwp-theme.png)
+
+## সূচিপত্র
+
+[বিএনডব্লিউপি উইকিসংযোগ ওয়ার্ডপ্রেস থিম](#bnwpbn)
+
+&nbsp;&nbsp;[১. সংক্ষিপ্ত পরিচিতি](#bn1)  
+&nbsp;&nbsp;[২. থিম কোথায় থাকবে](#bn2)  
+&nbsp;&nbsp;[৩. থিমের মূল ফাইল কাঠামো](#bn3)  
+&nbsp;&nbsp;[৪. গুরুত্বপূর্ণ থিম ফাইল](#bn4)  
+&nbsp;&nbsp;&nbsp;&nbsp;[`style.css`](#bn41)  
+&nbsp;&nbsp;&nbsp;&nbsp;[`functions.php`](#bn42)  
+&nbsp;&nbsp;&nbsp;&nbsp;[`header.php`](#bn43)  
+&nbsp;&nbsp;&nbsp;&nbsp;[`footer.php`](#bn44)  
+&nbsp;&nbsp;&nbsp;&nbsp;[`front-page.php`](#bn45)  
+&nbsp;&nbsp;&nbsp;&nbsp;[`archive-project.php`](#bn46)  
+&nbsp;&nbsp;&nbsp;&nbsp;[`single-project.php`](#bn47)  
+&nbsp;&nbsp;&nbsp;&nbsp;[`archive-persona.php`](#bn48)  
+&nbsp;&nbsp;&nbsp;&nbsp;[`single-persona.php`](#bn49)  
+&nbsp;&nbsp;[৫. অ্যাসেট লোডের ক্রম](#bn5)  
+&nbsp;&nbsp;[৬. কাস্টম পোস্ট টাইপ](#bn6)  
+&nbsp;&nbsp;[৭. দল ট্যাক্সোনমি](#bn7)  
+&nbsp;&nbsp;[৮. কাস্টম মেটা ফিল্ড](#bn8)  
+&nbsp;&nbsp;[৯. ভাষা ব্যবস্থা](#bn9)  
+&nbsp;&nbsp;[১০. ভাষা বদল যুক্তি](#bn10)  
+&nbsp;&nbsp;[১১. ন্যাভিগেশন](#bn11)  
+&nbsp;&nbsp;[১২. হেডার](#bn12)  
+&nbsp;&nbsp;[১৩. ফুটার](#bn13)  
+&nbsp;&nbsp;[১৪. আলো/অন্ধকার মোড](#bn14)  
+&nbsp;&nbsp;[১৫. হোমপেজ কাঠামো](#bn15)  
+&nbsp;&nbsp;[১৬. প্রকল্প আর্কাইভ ও একক প্রকল্প](#bn16)  
+&nbsp;&nbsp;[১৭. সদস্য আর্কাইভ ও একক সদস্য](#bn17)  
+&nbsp;&nbsp;[১৮. সিএসএস ফাইল ব্যবহারের নিয়ম](#bn18)  
+&nbsp;&nbsp;[১৯. লোগো ফাইল](#bn19)  
+&nbsp;&nbsp;[২০. মোবাইল প্যাডিং](#bn20)  
+&nbsp;&nbsp;[২১. থিম ইনস্টলেশন](#bn21)  
+&nbsp;&nbsp;[২২. ইনফিনিটিফ্রি লাইভ টেস্টিং](#bn22)  
+&nbsp;&nbsp;[২৩. প্রয়োজনীয় পৃষ্ঠা তৈরি](#bn23)  
+&nbsp;&nbsp;[২৪. প্রকল্প যোগ করার ধাপ](#bn24)  
+&nbsp;&nbsp;[২৫. সদস্য যোগ করার ধাপ](#bn25)  
+&nbsp;&nbsp;[২৬. ছবি ব্যবহারের নিয়ম](#bn26)  
+&nbsp;&nbsp;[২৭. পার্মালিংক রিফ্রেশ](#bn27)  
+&nbsp;&nbsp;[২৮. ক্যাশ পরিষ্কার](#bn28)  
+&nbsp;&nbsp;[২৯. উন্নয়ন কর্মপ্রবাহ](#bn29)  
+&nbsp;&nbsp;[৩০. জিপ বানানোর নিয়ম](#bn30)  
+&nbsp;&nbsp;[৩১. সমস্যা ও সমাধান](#bn31)  
+&nbsp;&nbsp;[৩২. নিরাপত্তা ও কোড নিয়ম](#bn32)  
+&nbsp;&nbsp;[৩৩. বর্তমান সীমাবদ্ধতা](#bn33)  
+&nbsp;&nbsp;[৩৪. ভবিষ্যৎ উন্নয়নের প্রস্তাব](#bn34)  
+&nbsp;&nbsp;[৩৫. দ্রুত অ্যাডমিন রেফারেন্স](#bn35)  
+&nbsp;&nbsp;[৩৬. লাইসেন্স নোটিশ](#bn36)  
+&nbsp;&nbsp;[৩৭. রিপোজিটরি নিয়ম](#bn37)  
+&nbsp;&nbsp;[৩৮. শেষ মন্তব্য](#bn38)
+
+[English Version](#en)
+
+&nbsp;&nbsp;[1. Project Overview](#en1)  
+&nbsp;&nbsp;[2. Theme Folder Location](#en2)  
+&nbsp;&nbsp;[3. Current Theme Structure](#en3)  
+&nbsp;&nbsp;[4. Important WordPress Theme Files](#en4)  
+&nbsp;&nbsp;[5. Asset Loading Order](#en5)  
+&nbsp;&nbsp;[6. Custom Post Types](#en6)  
+&nbsp;&nbsp;[7. Custom Taxonomy](#en7)  
+&nbsp;&nbsp;[8. Custom Meta Fields](#en8)  
+&nbsp;&nbsp;[9. Language System](#en9)  
+&nbsp;&nbsp;[10. Translation Logic](#en10)  
+&nbsp;&nbsp;[11. Navigation](#en11)  
+&nbsp;&nbsp;[12. Header Behavior](#en12)  
+&nbsp;&nbsp;[13. Footer Behavior](#en13)  
+&nbsp;&nbsp;[14. Dark/Light Mode](#en14)  
+&nbsp;&nbsp;[15. Homepage Structure](#en15)  
+&nbsp;&nbsp;[16. Archive and Single Page Behavior](#en16)  
+&nbsp;&nbsp;[17. CSS Files](#en17)  
+&nbsp;&nbsp;[18. Logo Files](#en18)  
+&nbsp;&nbsp;[19. Recommended Mobile Padding Patch](#en19)  
+&nbsp;&nbsp;[20. Installation](#en20)  
+&nbsp;&nbsp;[21. Live Testing on InfinityFree](#en21)  
+&nbsp;&nbsp;[22. Content Setup Checklist](#en22)  
+&nbsp;&nbsp;[23. Project Setup Checklist](#en23)  
+&nbsp;&nbsp;[24. Team Member Setup Checklist](#en24)  
+&nbsp;&nbsp;[25. Image Handling Rules](#en25)  
+&nbsp;&nbsp;[26. Permalink Rules](#en26)  
+&nbsp;&nbsp;[27. Cache Rules](#en27)  
+&nbsp;&nbsp;[28. Development Workflow](#en28)  
+&nbsp;&nbsp;[29. Packaging Rules](#en29)  
+&nbsp;&nbsp;[30. Troubleshooting](#en30)  
+&nbsp;&nbsp;[31. Security and Code Rules](#en31)  
+&nbsp;&nbsp;[32. Known Limitations](#en32)  
+&nbsp;&nbsp;[33. Recommended Future Improvements](#en33)  
+&nbsp;&nbsp;[34. Quick Admin Reference](#en34)  
+&nbsp;&nbsp;[35. License Notice](#en35)  
+&nbsp;&nbsp;[36. Repository Rule](#en36)
+
 ---
 
+<a id="bn1"></a>
 ## ১. সংক্ষিপ্ত পরিচিতি
 
 | বিষয় | তথ্য |
@@ -23,6 +118,7 @@
 
 ---
 
+<a id="bn2"></a>
 ## ২. থিম কোথায় থাকবে
 
 লাইভ সাইটে থিমের সঠিক অবস্থান:
@@ -61,6 +157,7 @@ wp-content/themes/bnwp-wikiconnect/bnwp-wikiconnect/style.css
 
 ---
 
+<a id="bn3"></a>
 ## ৩. থিমের মূল ফাইল কাঠামো
 
 ```text
@@ -111,8 +208,10 @@ bnwp-wikiconnect/
 
 ---
 
+<a id="bn4"></a>
 ## ৪. গুরুত্বপূর্ণ থিম ফাইল
 
+<a id="bn41"></a>
 ### ৪.১ `style.css`
 
 এটি থিমের মূল স্টাইলশিট। ওয়ার্ডপ্রেস এই ফাইল দেখে থিমের নাম, সংস্করণ এবং তথ্য শনাক্ত করে।
@@ -139,6 +238,7 @@ Text Domain: bnwp
 
 ---
 
+<a id="bn42"></a>
 ### ৪.২ `functions.php`
 
 এটি থিমের প্রধান কার্যকরী ফাইল। এখানে থিমের বড় অংশের পিএইচপি যুক্তি থাকে।
@@ -160,6 +260,7 @@ Text Domain: bnwp
 
 ---
 
+<a id="bn43"></a>
 ### ৪.৩ `header.php`
 
 সাইটের উপরের অংশ নিয়ন্ত্রণ করে।
@@ -182,6 +283,7 @@ assets/uploads/Bangla_WikiConnect_Logo_small.png
 
 ---
 
+<a id="bn44"></a>
 ### ৪.৪ `footer.php`
 
 সাইটের নিচের অংশ নিয়ন্ত্রণ করে।
@@ -204,6 +306,7 @@ assets/uploads/Bangla_WikiConnect_Logo_small.png
 
 ---
 
+<a id="bn45"></a>
 ### ৪.৫ `front-page.php`
 
 সাইটের হোমপেজ নিয়ন্ত্রণ করে।
@@ -219,6 +322,7 @@ assets/uploads/Bangla_WikiConnect_Logo_small.png
 
 ---
 
+<a id="bn46"></a>
 ### ৪.৬ `archive-project.php`
 
 সব প্রকল্প দেখানোর পৃষ্ঠা।
@@ -231,12 +335,14 @@ assets/uploads/Bangla_WikiConnect_Logo_small.png
 
 ---
 
+<a id="bn47"></a>
 ### ৪.৭ `single-project.php`
 
 একটি নির্দিষ্ট প্রকল্পের বিস্তারিত পৃষ্ঠা।
 
 ---
 
+<a id="bn48"></a>
 ### ৪.৮ `archive-persona.php`
 
 সব সদস্য বা পারসোনা দেখানোর পৃষ্ঠা।
@@ -249,12 +355,14 @@ assets/uploads/Bangla_WikiConnect_Logo_small.png
 
 ---
 
+<a id="bn49"></a>
 ### ৪.৯ `single-persona.php`
 
 একজন নির্দিষ্ট সদস্যের বিস্তারিত প্রোফাইল পৃষ্ঠা।
 
 ---
 
+<a id="bn410"></a>
 ### ৪.১০ `taxonomy-team.php`
 
 দল অনুযায়ী সদস্য দেখানোর পৃষ্ঠা।
@@ -269,36 +377,42 @@ assets/uploads/Bangla_WikiConnect_Logo_small.png
 
 ---
 
+<a id="bn411"></a>
 ### ৪.১১ `page-contact.php`
 
 যোগাযোগ পৃষ্ঠার টেমপ্লেট।
 
 ---
 
+<a id="bn412"></a>
 ### ৪.১২ `page-posts.php`
 
 ব্লগ বা পোস্ট তালিকার পৃষ্ঠা।
 
 ---
 
+<a id="bn413"></a>
 ### ৪.১৩ `page-search.php`
 
 আলাদা অনুসন্ধান পৃষ্ঠার টেমপ্লেট।
 
 ---
 
+<a id="bn414"></a>
 ### ৪.১৪ `search.php`
 
 অনুসন্ধান ফলাফল দেখানোর টেমপ্লেট।
 
 ---
 
+<a id="bn415"></a>
 ### ৪.১৫ `404.php`
 
 পাতা না পাওয়া গেলে দেখানোর কাস্টম পৃষ্ঠা।
 
 ---
 
+<a id="bn5"></a>
 ## ৫. অ্যাসেট লোডের ক্রম
 
 অ্যাসেট লোড হয় `functions.php` ফাইলের `bnwp_enqueue_assets()` ফাংশনের মাধ্যমে।
@@ -319,12 +433,14 @@ assets/uploads/Bangla_WikiConnect_Logo_small.png
 
 ---
 
+<a id="bn6"></a>
 ## ৬. কাস্টম পোস্ট টাইপ
 
 থিমে দুটি কাস্টম পোস্ট টাইপ আছে।
 
 ---
 
+<a id="bn61"></a>
 ### ৬.১ প্রকল্প
 
 রেজিস্টার করা পোস্ট টাইপ:
@@ -365,6 +481,7 @@ REST API
 
 ---
 
+<a id="bn62"></a>
 ### ৬.২ সদস্য বা পারসোনা
 
 রেজিস্টার করা পোস্ট টাইপ:
@@ -406,6 +523,7 @@ REST API
 
 ---
 
+<a id="bn7"></a>
 ## ৭. দল ট্যাক্সোনমি
 
 রেজিস্টার করা ট্যাক্সোনমি:
@@ -448,12 +566,14 @@ cot
 
 ---
 
+<a id="bn8"></a>
 ## ৮. কাস্টম মেটা ফিল্ড
 
 থিমে প্রকল্প, সদস্য এবং পোস্টের জন্য আলাদা কাস্টম ফিল্ড আছে।
 
 ---
 
+<a id="bn81"></a>
 ### ৮.১ প্রকল্পের ফিল্ড
 
 অ্যাডমিন অবস্থান:
@@ -516,6 +636,7 @@ https://commons.wikimedia.org/wiki/File:File_Name.png
 
 ---
 
+<a id="bn82"></a>
 ### ৮.২ সদস্য বা পারসোনা ফিল্ড
 
 অ্যাডমিন অবস্থান:
@@ -586,6 +707,7 @@ Aishik Rehman
 
 ---
 
+<a id="bn83"></a>
 ### ৮.৩ পোস্ট ফিল্ড
 
 অ্যাডমিন অবস্থান:
@@ -609,6 +731,7 @@ persona _bnwp_username = post _bnwp_user
 
 ---
 
+<a id="bn9"></a>
 ## ৯. ভাষা ব্যবস্থা
 
 থিমে সরল ভাষা ব্যবস্থা আছে। এটি পূর্ণ বহুভাষিক প্লাগইন নয়।
@@ -654,6 +777,7 @@ _bnwp_language
 
 ---
 
+<a id="bn10"></a>
 ## ১০. ভাষা বদল যুক্তি
 
 ভাষা বদল করে `bnwp_translation_url()` ফাংশন।
@@ -677,6 +801,7 @@ _bnwp_language
 
 ---
 
+<a id="bn11"></a>
 ## ১১. ন্যাভিগেশন
 
 থিমে একটি প্রধান মেনু অবস্থান আছে:
@@ -726,6 +851,7 @@ Projects
 
 ---
 
+<a id="bn12"></a>
 ## ১২. হেডার
 
 হেডারে রয়েছে:
@@ -807,6 +933,7 @@ assets/uploads/Bangla_WikiConnect_Logo_small.png
 
 ---
 
+<a id="bn13"></a>
 ## ১৩. ফুটার
 
 ফুটারে রয়েছে:
@@ -896,6 +1023,7 @@ assets/uploads/Bangla_WikiConnect_Logo_small.png
 
 ---
 
+<a id="bn14"></a>
 ## ১৪. আলো/অন্ধকার মোড
 
 আলো/অন্ধকার মোড নিয়ন্ত্রণ করে:
@@ -936,6 +1064,7 @@ theme-icon-active
 
 ---
 
+<a id="bn15"></a>
 ## ১৫. হোমপেজ কাঠামো
 
 হোমপেজ ফাইল:
@@ -946,6 +1075,7 @@ front-page.php
 
 ---
 
+<a id="bn151"></a>
 ### ১৫.১ হিরো অংশ
 
 এখানে থাকে:
@@ -1009,6 +1139,7 @@ front-page.php
 
 ---
 
+<a id="bn152"></a>
 ### ১৫.২ পরিসংখ্যান/উক্তি ক্যারোসেল
 
 বর্তমান ক্যারোসেলে আছে:
@@ -1026,6 +1157,7 @@ front-page.php
 
 ---
 
+<a id="bn153"></a>
 ### ১৫.৩ প্রকল্পসমূহ অংশ
 
 শিরোনাম:
@@ -1061,6 +1193,7 @@ _bnwp_lead
 
 ---
 
+<a id="bn154"></a>
 ### ১৫.৪ মূল দল অংশ
 
 শিরোনাম:
@@ -1097,6 +1230,7 @@ Wiki Username: থাকলে ভালো
 
 ---
 
+<a id="bn155"></a>
 ### ১৫.৫ ফেসবুক ফিড
 
 হোমপেজে ফেসবুক পেজ প্লাগইন ব্যবহার করা হয়েছে।
@@ -1111,6 +1245,7 @@ https://www.facebook.com/banglawikiconnect
 
 ---
 
+<a id="bn156"></a>
 ### ১৫.৬ অংশীদার লোগো
 
 হোমপেজে অংশীদার অংশে আছে:
@@ -1129,8 +1264,10 @@ assets/uploads/
 
 ---
 
+<a id="bn16"></a>
 ## ১৬. প্রকল্প আর্কাইভ ও একক প্রকল্প
 
+<a id="bn161"></a>
 ### ১৬.১ প্রকল্প আর্কাইভ
 
 ঠিকানা:
@@ -1198,6 +1335,7 @@ permalink
 
 ---
 
+<a id="bn162"></a>
 ### ১৬.২ একক প্রকল্প
 
 টেমপ্লেট:
@@ -1219,8 +1357,10 @@ post content
 
 ---
 
+<a id="bn17"></a>
 ## ১৭. সদস্য আর্কাইভ ও একক সদস্য
 
+<a id="bn171"></a>
 ### ১৭.১ সদস্য আর্কাইভ
 
 ঠিকানা:
@@ -1247,6 +1387,7 @@ permalink
 
 ---
 
+<a id="bn172"></a>
 ### ১৭.২ একক সদস্য
 
 টেমপ্লেট:
@@ -1277,10 +1418,12 @@ post _bnwp_user = persona _bnwp_username
 
 ---
 
+<a id="bn18"></a>
 ## ১৮. সিএসএস ফাইল ব্যবহারের নিয়ম
 
 থিমে দুটি গুরুত্বপূর্ণ সিএসএস ফাইল আছে।
 
+<a id="bn181"></a>
 ### ১৮.১ মূল `style.css`
 
 পথ:
@@ -1300,6 +1443,7 @@ bnwp-wikiconnect/style.css
 
 ---
 
+<a id="bn182"></a>
 ### ১৮.২ প্রধান নকশা সিএসএস
 
 পথ:
@@ -1318,6 +1462,7 @@ bnwp-wikiconnect/assets/css/style.css
 
 ---
 
+<a id="bn19"></a>
 ## ১৯. লোগো ফাইল
 
 গুরুত্বপূর্ণ লোগো:
@@ -1359,6 +1504,7 @@ assets/uploads/Bangla_WikiConnect_LOGO.png
 
 ---
 
+<a id="bn20"></a>
 ## ২০. মোবাইল প্যাডিং
 
 মোবাইলে কনটেন্ট খুব কিনারায় লেগে গেলে মূল `style.css` ফাইলের শেষে যোগ করা যায়:
@@ -1376,8 +1522,10 @@ assets/uploads/Bangla_WikiConnect_LOGO.png
 
 ---
 
+<a id="bn21"></a>
 ## ২১. থিম ইনস্টলেশন
 
+<a id="bn211"></a>
 ### ২১.১ ওয়ার্ডপ্রেস অ্যাডমিন থেকে ইনস্টল
 
 ১. ওয়ার্ডপ্রেস অ্যাডমিনে যান।  
@@ -1415,6 +1563,7 @@ Save Changes
 
 ---
 
+<a id="bn212"></a>
 ### ২১.২ ফাইল ম্যানেজার বা এফটিপি দিয়ে ইনস্টল
 
 থিম ফোল্ডার আপলোড করুন:
@@ -1431,6 +1580,7 @@ Appearance → Themes
 
 ---
 
+<a id="bn22"></a>
 ## ২২. ইনফিনিটিফ্রি লাইভ টেস্টিং
 
 ইনফিনিটিফ্রি ফাইল ম্যানেজারে সঠিক পথ:
@@ -1457,6 +1607,7 @@ htdocs/wp-content/themes/bnwp-wikiconnect/style.css
 
 ---
 
+<a id="bn23"></a>
 ## ২৩. প্রয়োজনীয় পৃষ্ঠা তৈরি
 
 থিম চালুর পর নিচের পৃষ্ঠাগুলো তৈরি বা যাচাই করা ভালো।
@@ -1480,6 +1631,7 @@ htdocs/wp-content/themes/bnwp-wikiconnect/style.css
 
 ---
 
+<a id="bn24"></a>
 ## ২৪. প্রকল্প যোগ করার ধাপ
 
 ১. যান:
@@ -1524,6 +1676,7 @@ Lead: খালি নয়
 
 ---
 
+<a id="bn25"></a>
 ## ২৫. সদস্য যোগ করার ধাপ
 
 ১. যান:
@@ -1563,6 +1716,7 @@ cot
 
 ---
 
+<a id="bn26"></a>
 ## ২৬. ছবি ব্যবহারের নিয়ম
 
 এই ফিল্ডগুলোতে সরাসরি ছবি লিংক ব্যবহার করুন:
@@ -1611,6 +1765,7 @@ https://upload.wikimedia.org/wikipedia/commons/....svg
 
 ---
 
+<a id="bn27"></a>
 ## ২৭. পার্মালিংক রিফ্রেশ
 
 থিম সক্রিয় করার পর বা কাস্টম পোস্ট টাইপ/ট্যাক্সোনমি বদলানোর পর পার্মালিংক রিফ্রেশ করতে হবে।
@@ -1631,6 +1786,7 @@ Settings → Permalinks → Save Changes
 
 ---
 
+<a id="bn28"></a>
 ## ২৮. ক্যাশ পরিষ্কার
 
 লাইভ হোস্টিংয়ে থিম ফাইল বদলালে ক্যাশ পরিষ্কার করতে হবে।
@@ -1653,6 +1809,7 @@ Cloudflare cache, যদি থাকে
 
 ---
 
+<a id="bn29"></a>
 ## ২৯. উন্নয়ন কর্মপ্রবাহ
 
 প্রস্তাবিত গিট কর্মপ্রবাহ:
@@ -1686,6 +1843,7 @@ test   → পরীক্ষা/উন্নয়ন
 
 ---
 
+<a id="bn30"></a>
 ## ৩০. জিপ বানানোর নিয়ম
 
 ওয়ার্ডপ্রেসে আপলোড করার জিপে একটিমাত্র মূল থিম ফোল্ডার থাকবে।
@@ -1732,8 +1890,10 @@ Thumbs.db
 
 ---
 
+<a id="bn31"></a>
 ## ৩১. সমস্যা ও সমাধান
 
+<a id="bn311"></a>
 ### ৩১.১ থিম ওয়ার্ডপ্রেসে দেখা যাচ্ছে না
 
 যাচাই করুন:
@@ -1746,6 +1906,7 @@ wp-content/themes/bnwp-wikiconnect/style.css
 
 ---
 
+<a id="bn312"></a>
 ### ৩১.২ `/projects/` বা `/persona/` ঠিকানায় ৪০৪ দেখাচ্ছে
 
 যান:
@@ -1756,6 +1917,7 @@ Settings → Permalinks → Save Changes
 
 ---
 
+<a id="bn313"></a>
 ### ৩১.৩ হোমপেজে প্রকল্প দেখা যাচ্ছে না
 
 প্রতিটি প্রকল্পে যাচাই করুন:
@@ -1775,6 +1937,7 @@ Lead: খালি নয়
 
 ---
 
+<a id="bn314"></a>
 ### ৩১.৪ হোমপেজে মূল দল দেখা যাচ্ছে না
 
 প্রতিটি সদস্যে যাচাই করুন:
@@ -1794,6 +1957,7 @@ team slug = cot
 
 ---
 
+<a id="bn315"></a>
 ### ৩১.৫ ছবি দেখা যাচ্ছে না
 
 ছবির লিংক সরাসরি ছবি কিনা যাচাই করুন।
@@ -1814,6 +1978,7 @@ https://commons.wikimedia.org/wiki/Special:FilePath/Something.png
 
 ---
 
+<a id="bn316"></a>
 ### ৩১.৬ লোগো বিশাল হয়ে যাচ্ছে
 
 নির্দিষ্ট ক্লাস দিয়ে আকার ঠিক করুন।
@@ -1832,6 +1997,7 @@ https://commons.wikimedia.org/wiki/Special:FilePath/Something.png
 
 ---
 
+<a id="bn317"></a>
 ### ৩১.৭ মোবাইলে বোতাম পুরো প্রস্থ নিয়ে নিচ্ছে
 
 এই ধরনের সিএসএস সরিয়ে দিন:
@@ -1850,6 +2016,7 @@ align-items: flex-start !important;
 
 ---
 
+<a id="bn318"></a>
 ### ৩১.৮ পরিবর্তন দেখা যাচ্ছে না
 
 পরিষ্কার করুন:
@@ -1863,6 +2030,7 @@ Browser cache
 
 ---
 
+<a id="bn32"></a>
 ## ৩২. নিরাপত্তা ও কোড নিয়ম
 
 থিমে সাধারণ ওয়ার্ডপ্রেস নিরাপত্তা চর্চা ব্যবহার করা হয়েছে।
@@ -1891,6 +2059,7 @@ wp-content/themes/bnwp-wikiconnect/
 
 ---
 
+<a id="bn33"></a>
 ## ৩৩. বর্তমান সীমাবদ্ধতা
 
 - ভাষা ব্যবস্থা মেটা/কোয়েরি ভিত্তিক, পূর্ণ বহুভাষিক প্লাগইন নয়।
@@ -1902,6 +2071,7 @@ wp-content/themes/bnwp-wikiconnect/
 
 ---
 
+<a id="bn34"></a>
 ## ৩৪. ভবিষ্যৎ উন্নয়নের প্রস্তাব
 
 ভবিষ্যতে করা যেতে পারে:
@@ -1919,8 +2089,10 @@ wp-content/themes/bnwp-wikiconnect/
 
 ---
 
+<a id="bn35"></a>
 ## ৩৫. দ্রুত অ্যাডমিন রেফারেন্স
 
+<a id="bn35project"></a>
 ### প্রকল্প যোগ
 
 ```text
@@ -1946,6 +2118,7 @@ Content
 
 ---
 
+<a id="bn35persona"></a>
 ### সদস্য যোগ
 
 ```text
@@ -1973,6 +2146,7 @@ Short Bio
 
 ---
 
+<a id="bn35coreteam"></a>
 ### হোমপেজে মূল দলের সদস্য দেখানো
 
 ```text
@@ -1985,6 +2159,7 @@ Publish
 
 ---
 
+<a id="bn35logo"></a>
 ### হেডার/ফুটার লোগো পরিবর্তন
 
 বর্তমান লোগো:
@@ -2008,6 +2183,7 @@ style.css
 
 ---
 
+<a id="bn35cache"></a>
 ### ক্যাশ পরিষ্কার
 
 ```text
@@ -2017,6 +2193,7 @@ Browser hard refresh
 
 ---
 
+<a id="bn36"></a>
 ## ৩৬. লাইসেন্স নোটিশ
 
 ফুটারে বর্তমানে বলা হয়েছে যে সাইটের চিত্র ও ভিডিও কনটেন্ট সিসি বাই-এসএ ৪.০ লাইসেন্সে প্রকাশিত, যদি না আলাদা লাইসেন্স উল্লেখ থাকে। পাঠ্য কনটেন্ট মেধাসত্ত্বের অন্তর্ভুক্ত বলে ধরা হয়েছে।
@@ -2029,6 +2206,7 @@ Browser hard refresh
 
 ---
 
+<a id="bn37"></a>
 ## ৩৭. রিপোজিটরি নিয়ম
 
 এই রিপোজিটরিতে শুধু থিম ফাইল রাখা উচিত।
@@ -2053,18 +2231,22 @@ wp-config.php
 
 ---
 
+<a id="bn38"></a>
 ## ৩৮. শেষ মন্তব্য
 
 এই থিমটি বাংলা উইকিসংযোগের নিজস্ব প্রয়োজন অনুযায়ী তৈরি। তাই সাধারণ ব্লগ থিমের মতো সবকিছু ডাইনামিক নয়। প্রকল্প, সদস্য, ভাষা এবং হোমপেজের কিছু অংশ নির্দিষ্ট কাঠামোর ওপর নির্ভর করে। পরিবর্তন করার সময় আগে স্থানীয় সাইটে পরীক্ষা করা ভালো, তারপর লাইভ সাইটে আপলোড করা উচিত।
 
 ----
+<a id="en"></a>
 ### English version
+<a id="enwp"></a>
 # BNWP WikiConnect WordPress Theme
 
 A custom WordPress theme for the **Bangla WikiConnect** website. The theme is built for a Bengali-first Wikimedia/community website with project pages, team/persona profiles, bilingual support, dark/light mode, custom archive templates, and a structured homepage.
 
 ---
 
+<a id="en1"></a>
 ## 1. Project Overview
 
 **Theme Name:** BNWP WikiConnect  
@@ -2081,6 +2263,7 @@ This theme converts the Bangla WikiConnect static/Hugo-style design into a WordP
 
 ---
 
+<a id="en2"></a>
 ## 2. Theme Folder Location
 
 For local development using XAMPP:
@@ -2117,6 +2300,7 @@ wp-content/themes/bnwp-wikiconnect/bnwp-wikiconnect/style.css
 
 ---
 
+<a id="en3"></a>
 ## 3. Current Theme Structure
 
 ```text
@@ -2167,8 +2351,10 @@ bnwp-wikiconnect/
 
 ---
 
+<a id="en4"></a>
 ## 4. Important WordPress Theme Files
 
+<a id="en4stylecss"></a>
 ### `style.css`
 
 Root stylesheet required by WordPress. It contains the theme metadata header and final CSS overrides.
@@ -2191,6 +2377,7 @@ Text Domain: bnwp
 */
 ```
 
+<a id="en4functionsphp"></a>
 ### `functions.php`
 
 Main theme logic file. It handles:
@@ -2207,6 +2394,7 @@ Main theme logic file. It handles:
 - reading time helper
 - image fallback helper
 
+<a id="en4headerphp"></a>
 ### `header.php`
 
 Controls the site header, navigation, language toggle, dark/light toggle, search form, and mobile menu.
@@ -2220,6 +2408,7 @@ Current header includes:
 - responsive Bootstrap navigation
 - fallback menu if no WordPress menu is assigned
 
+<a id="en4footerphp"></a>
 ### `footer.php`
 
 Controls the footer brand, footer buttons, license notice, and WordPress footer hook.
@@ -2232,6 +2421,7 @@ Current footer includes:
 - members button
 - license/copyright text
 
+<a id="en4frontpagephp"></a>
 ### `front-page.php`
 
 Controls the homepage.
@@ -2245,6 +2435,7 @@ Homepage sections:
 5. Facebook feed
 6. partner logos
 
+<a id="en4archiveprojectphp"></a>
 ### `archive-project.php`
 
 Shows the archive/listing page for all Project posts.
@@ -2255,10 +2446,12 @@ Default URL:
 /projects/
 ```
 
+<a id="en4singleprojectphp"></a>
 ### `single-project.php`
 
 Shows a single project detail page.
 
+<a id="en4archivepersonaphp"></a>
 ### `archive-persona.php`
 
 Shows all team members/personas.
@@ -2269,10 +2462,12 @@ Default URL:
 /persona/
 ```
 
+<a id="en4singlepersonaphp"></a>
 ### `single-persona.php`
 
 Shows a single team member profile.
 
+<a id="en4taxonomyteamphp"></a>
 ### `taxonomy-team.php`
 
 Shows team members filtered by team taxonomy.
@@ -2285,28 +2480,34 @@ Example URLs:
 /teams/jury/
 ```
 
+<a id="en4pagecontactphp"></a>
 ### `page-contact.php`
 
 Template for contact page.
 
+<a id="en4pagepostsphp"></a>
 ### `page-posts.php`
 
 Template for blog/news post listing.
 
+<a id="en4pagesearchphp"></a>
 ### `page-search.php`
 
 Template for dedicated search page.
 
+<a id="en4searchphp"></a>
 ### `search.php`
 
 Search results template.
 
+<a id="en4404php"></a>
 ### `404.php`
 
 Custom 404 page.
 
 ---
 
+<a id="en5"></a>
 ## 5. Asset Loading Order
 
 Assets are loaded in `functions.php` using `bnwp_enqueue_assets()`.
@@ -2327,12 +2528,14 @@ Because root `style.css` is loaded last, final overrides should usually be place
 
 ---
 
+<a id="en6"></a>
 ## 6. Custom Post Types
 
 The theme registers two custom post types.
 
 ---
 
+<a id="en61"></a>
 ### 6.1 Project
 
 Registered post type:
@@ -2373,6 +2576,7 @@ Used in:
 
 ---
 
+<a id="en62"></a>
 ### 6.2 Team Member / Persona
 
 Registered post type:
@@ -2414,8 +2618,10 @@ Used in:
 
 ---
 
+<a id="en7"></a>
 ## 7. Custom Taxonomy
 
+<a id="en7teamtaxonomy"></a>
 ### Team Taxonomy
 
 Registered taxonomy:
@@ -2458,12 +2664,14 @@ cot
 
 ---
 
+<a id="en8"></a>
 ## 8. Custom Meta Fields
 
 The theme uses custom meta fields for projects, personas, and posts.
 
 ---
 
+<a id="en81"></a>
 ### 8.1 Project Details
 
 Admin location:
@@ -2530,6 +2738,7 @@ The wrong version is a webpage, not a direct image.
 
 ---
 
+<a id="en82"></a>
 ### 8.2 Team Member Details
 
 Admin location:
@@ -2602,6 +2811,7 @@ The theme adds `@` automatically on cards.
 
 ---
 
+<a id="en83"></a>
 ### 8.3 Post Details
 
 Admin location:
@@ -2627,6 +2837,7 @@ So the username must match exactly.
 
 ---
 
+<a id="en9"></a>
 ## 9. Language System
 
 The theme uses a simple query-based language system.
@@ -2674,6 +2885,7 @@ This means Project, Persona, Blog, Team, and Search results are filtered by lang
 
 ---
 
+<a id="en10"></a>
 ## 10. Translation Logic
 
 The language switcher uses `bnwp_translation_url()`.
@@ -2706,6 +2918,7 @@ If a matching translated page does not exist, the switcher falls back to a relev
 
 ---
 
+<a id="en11"></a>
 ## 11. Navigation
 
 The theme registers one WordPress menu location:
@@ -2761,6 +2974,7 @@ The Members menu includes dropdown links for:
 
 ---
 
+<a id="en12"></a>
 ## 12. Header Behavior
 
 The header contains:
@@ -2801,6 +3015,7 @@ Expected mobile layout:
 
 ---
 
+<a id="en13"></a>
 ## 13. Footer Behavior
 
 The footer contains:
@@ -2895,6 +3110,7 @@ Recommended CSS:
 
 ---
 
+<a id="en14"></a>
 ## 14. Dark/Light Mode
 
 Dark/light mode is handled by:
@@ -2940,6 +3156,7 @@ theme-icon-active
 
 ---
 
+<a id="en15"></a>
 ## 15. Homepage Structure
 
 Homepage file:
@@ -2950,6 +3167,7 @@ front-page.php
 
 ---
 
+<a id="en151"></a>
 ### 15.1 Hero Section
 
 Contains:
@@ -3013,6 +3231,7 @@ Recommended button CSS:
 
 ---
 
+<a id="en152"></a>
 ### 15.2 Quote/Stats Carousel
 
 The homepage carousel currently includes:
@@ -3030,6 +3249,7 @@ These are hard-coded in `front-page.php` inside the `$quotes` array.
 
 ---
 
+<a id="en153"></a>
 ### 15.3 Projects Section
 
 Title:
@@ -3065,6 +3285,7 @@ Card content:
 
 ---
 
+<a id="en154"></a>
 ### 15.4 Core Team Section
 
 Title:
@@ -3101,6 +3322,7 @@ Wiki Username: optional but recommended
 
 ---
 
+<a id="en155"></a>
 ### 15.5 Facebook Feed
 
 The homepage includes a Facebook Page plugin for:
@@ -3113,6 +3335,7 @@ The Facebook SDK is loaded in `header.php`.
 
 ---
 
+<a id="en156"></a>
 ### 15.6 Partners Section
 
 The partners section is hard-coded in `front-page.php` and includes:
@@ -3131,8 +3354,10 @@ assets/uploads/
 
 ---
 
+<a id="en16"></a>
 ## 16. Archive and Single Page Behavior
 
+<a id="en16projectarchive"></a>
 ### Project Archive
 
 URL:
@@ -3170,6 +3395,7 @@ Button class:
 
 ---
 
+<a id="en16singleproject"></a>
 ### Single Project
 
 Template:
@@ -3195,6 +3421,7 @@ If `_bnwp_wiki` exists, the page shows:
 
 ---
 
+<a id="en16personaarchive"></a>
 ### Persona Archive
 
 URL:
@@ -3221,6 +3448,7 @@ permalink
 
 ---
 
+<a id="en16singlepersona"></a>
 ### Single Persona
 
 Template:
@@ -3251,10 +3479,12 @@ post _bnwp_user = persona _bnwp_username
 
 ---
 
+<a id="en17"></a>
 ## 17. CSS Files
 
 There are two important CSS locations.
 
+<a id="en171"></a>
 ### 17.1 Root `style.css`
 
 Path:
@@ -3274,6 +3504,7 @@ Use this file for most manual changes.
 
 ---
 
+<a id="en172"></a>
 ### 17.2 Main Theme CSS
 
 Path:
@@ -3292,6 +3523,7 @@ Do not use this for quick fixes unless the change belongs to the main design sys
 
 ---
 
+<a id="en18"></a>
 ## 18. Logo Files
 
 Important logo assets:
@@ -3339,6 +3571,7 @@ If needed, control specific logos with dedicated classes:
 
 ---
 
+<a id="en19"></a>
 ## 19. Recommended Mobile Padding Patch
 
 For better mobile spacing, add this to root `style.css`:
@@ -3356,8 +3589,10 @@ Use `24px` first. Increase to `30px` only if the layout still feels cramped.
 
 ---
 
+<a id="en20"></a>
 ## 20. Installation
 
+<a id="en201"></a>
 ### 20.1 Install Through WordPress Admin
 
 1. Go to WordPress admin.
@@ -3401,6 +3636,7 @@ This refreshes rewrite rules for:
 
 ---
 
+<a id="en202"></a>
 ### 20.2 Install Through File Manager/FTP
 
 Upload the theme folder to:
@@ -3417,6 +3653,7 @@ Appearance → Themes
 
 ---
 
+<a id="en21"></a>
 ## 21. Live Testing on InfinityFree
 
 Recommended path:
@@ -3443,10 +3680,12 @@ htdocs/wp-content/themes/bnwp-wikiconnect/style.css
 
 ---
 
+<a id="en22"></a>
 ## 22. Content Setup Checklist
 
 After activating the theme, create or verify these pages/posts.
 
+<a id="en22requiredpages"></a>
 ### Required Pages
 
 | Page | Suggested Slug | Template |
@@ -3458,6 +3697,7 @@ After activating the theme, create or verify these pages/posts.
 | About | `/about/` | normal page |
 | Newsroom | `/newsroom/` | normal page |
 
+<a id="en22optionalenglishpages"></a>
 ### Optional English Pages
 
 | Bengali Page | English Page |
@@ -3468,6 +3708,7 @@ After activating the theme, create or verify these pages/posts.
 
 ---
 
+<a id="en23"></a>
 ## 23. Project Setup Checklist
 
 For each project:
@@ -3505,6 +3746,7 @@ Language
 
 ---
 
+<a id="en24"></a>
 ## 24. Team Member Setup Checklist
 
 For each member:
@@ -3547,6 +3789,7 @@ Team slug: cot
 
 ---
 
+<a id="en25"></a>
 ## 25. Image Handling Rules
 
 Use direct image URLs in these fields:
@@ -3597,6 +3840,7 @@ https://upload.wikimedia.org/wikipedia/commons/....svg
 
 ---
 
+<a id="en26"></a>
 ## 26. Permalink Rules
 
 After activating or changing custom post type/taxonomy code, always flush permalinks:
@@ -3615,6 +3859,7 @@ This fixes 404 errors for:
 
 ---
 
+<a id="en27"></a>
 ## 27. Cache Rules
 
 When editing theme files on a live host, clear cache after every major change.
@@ -3637,6 +3882,7 @@ Mac: Cmd + Shift + R
 
 ---
 
+<a id="en28"></a>
 ## 28. Development Workflow
 
 Recommended Git workflow:
@@ -3670,6 +3916,7 @@ test   → experimental/development
 
 ---
 
+<a id="en29"></a>
 ## 29. Packaging Rules
 
 When creating a ZIP for WordPress upload, the ZIP should contain exactly one top-level theme folder:
@@ -3714,8 +3961,10 @@ The distributed ZIP should include only theme files.
 
 ---
 
+<a id="en30"></a>
 ## 30. Troubleshooting
 
+<a id="en30themedoesnotappearinwordpress"></a>
 ### Theme does not appear in WordPress
 
 Check:
@@ -3728,6 +3977,7 @@ The file must contain a valid WordPress theme header.
 
 ---
 
+<a id="en30siteshows404onprojectsorpersona"></a>
 ### Site shows 404 on `/projects/` or `/persona/`
 
 Go to:
@@ -3738,6 +3988,7 @@ Settings → Permalinks → Save Changes
 
 ---
 
+<a id="en30homepagedoesnotshowprojectposts"></a>
 ### Homepage does not show Project posts
 
 Check each Project post:
@@ -3757,6 +4008,7 @@ Also check current language. Bengali content appears on normal URL. English cont
 
 ---
 
+<a id="en30homepagedoesnotshowcoreteammembers"></a>
 ### Homepage does not show core team members
 
 Check each Team Member post:
@@ -3776,6 +4028,7 @@ team slug = cot
 
 ---
 
+<a id="en30imagenotshowing"></a>
 ### Image not showing
 
 Check whether the URL is a direct image URL.
@@ -3796,6 +4049,7 @@ or upload image to WordPress Media Library.
 
 ---
 
+<a id="en30logobecomeshuge"></a>
 ### Logo becomes huge
 
 Use a specific logo class with fixed width.
@@ -3814,6 +4068,7 @@ Example:
 
 ---
 
+<a id="en30buttonbecomesfullwidthonmobile"></a>
 ### Button becomes full-width on mobile
 
 Remove CSS like:
@@ -3832,6 +4087,7 @@ align-items: flex-start !important;
 
 ---
 
+<a id="en30changesnotvisible"></a>
 ### Changes not visible
 
 Clear:
@@ -3845,6 +4101,7 @@ Then hard refresh.
 
 ---
 
+<a id="en31"></a>
 ## 31. Security and Code Rules
 
 The theme follows common WordPress safety practices:
@@ -3871,6 +4128,7 @@ wp-content/themes/bnwp-wikiconnect/
 
 ---
 
+<a id="en32"></a>
 ## 32. Known Limitations
 
 - Language support is query/meta based, not a full multilingual plugin system.
@@ -3882,6 +4140,7 @@ wp-content/themes/bnwp-wikiconnect/
 
 ---
 
+<a id="en33"></a>
 ## 33. Recommended Future Improvements
 
 Useful future upgrades:
@@ -3899,8 +4158,10 @@ Useful future upgrades:
 
 ---
 
+<a id="en34"></a>
 ## 34. Quick Admin Reference
 
+<a id="en34addproject"></a>
 ### Add Project
 
 ```text
@@ -3926,6 +4187,7 @@ Content
 
 ---
 
+<a id="en34addteammember"></a>
 ### Add Team Member
 
 ```text
@@ -3953,6 +4215,7 @@ Short Bio
 
 ---
 
+<a id="en34addcoreteammembertohomepage"></a>
 ### Add Core Team Member to Homepage
 
 ```text
@@ -3965,6 +4228,7 @@ Publish
 
 ---
 
+<a id="en34editheaderfooterlogo"></a>
 ### Edit Header/Footer Logo
 
 Logo file currently used:
@@ -3988,6 +4252,7 @@ style.css
 
 ---
 
+<a id="en34clearcache"></a>
 ### Clear Cache
 
 ```text
@@ -3997,6 +4262,7 @@ Browser hard refresh
 
 ---
 
+<a id="en35"></a>
 ## 35. License Notice
 
 Footer notice currently states that images and video content are released under CC BY-SA 4.0 unless a separate license is mentioned, while text content is treated as intellectual property of the site.
@@ -4009,6 +4275,7 @@ Current footer year is generated dynamically using:
 
 ---
 
+<a id="en36"></a>
 ## 36. Repository Rule
 
 This repository should contain only the custom theme files.
